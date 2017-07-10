@@ -1,0 +1,86 @@
+#left_menu, #right_menu{
+  background: lightblue;
+
+}
+
+#tickets {
+  background: chocolate;
+
+}
+
+#active{
+    background-color: #26323c;
+}
+
+#active:hover{
+    background-color: #26323c;
+}
+
+#footer{
+  background-color: #26323c ;
+  width: 100%;
+}
+
+#footer > li{
+  width: 100%;
+
+}
+
+#footer > li > a{
+  display: inline-block;
+}
+
+#footer > li > a:hover{
+background-color: #324d59;
+color: white;
+}
+
+#content{
+  height: 830px;
+}
+
+.navbar .container-fluid{
+  background-color: #26323c;
+}
+
+.navbar-header{
+  background-color: #26323c;
+}
+
+
+
+.container{
+
+}
+
+.navbar-default .navbar-brand{
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color: white;
+}
+
+a{
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+li:hover{
+  background-color: #26323c;
+}
+
+
+ul{
+  background-color: #324d59;
+}
+
+footer{
+  background-color: #26323c;
+  color:white;
+}

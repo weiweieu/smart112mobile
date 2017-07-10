@@ -1,0 +1,93 @@
+
+body{
+  color:grey;
+  background-color: #cbcbcb;
+}
+
+form{
+background: #f8f8f8;
+}
+
+select {
+  width: 100%;
+  height:35px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+
+
+img {
+  height: auto;
+  width: 100%;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+}
+
+.input-group{
+  display: block;
+  padding-bottom: 30px;
+
+}
+
+.col-md-offset-2{
+  margin-top: 5em;
+}
+/*
+footer {
+  height: 100%;
+  margin-top: 10px;
+  background-color: #3f6171;
+  color: white;
+}
+
+
+
+footer a {
+  color: white;
+}
+*/
+.form-group{
+  display: inline-block;
+  padding-top: 15px;
+  position: relative;
+  width: 100%;
+
+}
+
+.form-group .btn{
+  float:right;
+}
+
+.form-group a {
+
+
+}
+
+
+.error {
+
+}
+
+
+#language{
+  width:auto;
+  float: right;
+}
+
+#connectionForm{
+  padding: 100px;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#inscriptionForm{
+  padding: 100px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#languageButton{
+  float: right;
+}
