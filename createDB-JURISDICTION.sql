@@ -110,9 +110,17 @@ create table JURISDICTION_SERVICES
 
 ) DEFAULT CHARSET=utf8;
 
-create table JURISDICTION_STREET
+create table SERVICES
 (
     SERVICE_ID             smallint not null AUTO_INCREMENT,
     SERVICE_NAME        varchar(25) not null,
     primary key (SERVICE_ID)
+) DEFAULT CHARSET=utf8;
+
+create table JURISDICTION_STREET
+(
+    STREET_ID             smallint not null AUTO_INCREMENT,
+    STREET_NAME        varchar(25) not null,
+    STREET_TOWN_NAME        varchar(25) not null,
+    primary key (STREET_ID)
 ) DEFAULT CHARSET=utf8;
