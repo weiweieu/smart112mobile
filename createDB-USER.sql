@@ -7,10 +7,9 @@ create table USER
    USER_NAME          varchar(25) not null,
    USER_SURNAME          varchar(25) not null,
    USER_SERVICE          varchar(25) not null,
-   USER_COUNTRY         varchar(255) not null,
-   USER_DEPARTMENT        varchar(255) not null,
-   USER_POSTCODE        int not null,
-   USER_TOWN        varchar(255) not null,
+   USER_SERVICE         varchar(255) not null,
+   USER_COUNTRY        varchar(255) not null,
+   USER_IS_VALIDATED        boolean not null,
    primary key (USER_ID)
 ) DEFAULT CHARSET=utf8;
 
@@ -78,3 +77,15 @@ create table USER_SITE
      USER_ID        smallint not null,
      SITE_ID       smallint not null
   )  DEFAULT CHARSET=utf8;
+
+  create table USER_LOCATION
+  (
+     USER_LOCATION_ID             smallint not null AUTO_INCREMENT,
+     USER_ID           smallint not null,
+     USER_DEPARTMENT_NAME          varchar(255) not null,
+     USER_DEPARTMENT_NUMBER       integer not null,
+     USER_TOWN         varchar(255) not null,
+     USER_POSTCODE        integer not null,
+
+     primary key (USER_ID)
+  ) DEFAULT CHARSET=utf8;
