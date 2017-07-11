@@ -7,7 +7,6 @@ create table USER
    USER_NAME          varchar(25) not null,
    USER_SURNAME          varchar(25) not null,
    USER_SERVICE          varchar(25) not null,
-   USER_SERVICE         varchar(255) not null,
    USER_COUNTRY        varchar(255) not null,
    USER_IS_VALIDATED        boolean not null,
    primary key (USER_ID)
@@ -87,5 +86,5 @@ create table USER_SITE
      USER_TOWN         varchar(255) not null,
      USER_POSTCODE        integer not null,
 
-     primary key (USER_ID)
+     primary key (USER_LOCATION_ID)
   ) DEFAULT CHARSET=utf8;
