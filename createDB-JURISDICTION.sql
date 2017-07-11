@@ -59,6 +59,8 @@ create table DEPARTMENT
 (
     DEPARTMENT_ID             smallint not null AUTO_INCREMENT,
     DEPARTMENT_NUMBER       int not null,
+    DEPARTMENT_NAME         varchar(255) not null,
+    DEPARTMENT_COUNTRY          varchar(255) not null,
     primary key (DEPARTMENT_ID)
 ) DEFAULT CHARSET=utf8;
 
