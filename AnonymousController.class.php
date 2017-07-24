@@ -98,9 +98,9 @@ class AnonymousController extends Controller {
 					}else if(isSet($_COOKIE['lang']) && $_COOKIE['lang']!= '#'){
 						$this->language = $_COOKIE['lang'];
 					}else{
-						$tab_lang = explode(“_”, $_SERVER[‘HTTP_ACCEPT_LANGUAGE’]);
-						if($tab_lang[0] == en || $tab_lang[0] == fr || $tab_lang[0] == es){
-							$this->language = $tab_lang[0];
+						$tab_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
+						if(strcmp($tab_lang,'en') != 0  || strcmp($tab_lang,'fr') != 0 || strcmp($tab_lang,'es') != 0 ){
+							$this->language = $tab_lang;
 						}else{
 							$this->language = 'en';
 						}

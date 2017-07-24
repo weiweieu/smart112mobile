@@ -32,7 +32,7 @@ class AutoLoader extends MyObject {
 		if (strlen(strstr($fileToLoad, '/model/'))>0) { // On cherche s'il y a une première occurence de '/model/' dans l'adresse $fileToLoad
 			// We will load a model class
 			// so let's try to load the sql requests associated with it
-			if($className=='UserModel' || $className=='AnonymousModel' || $className=='JurisdictionModel'){
+			if($className=='UserModel' || $className=='AnonymousModel' || $className=='JurisdictionModel' || $className=='RequestsModel'){
 				$sqlFileToLoad = __ROOT_DIR . '/sql/' . $className . '.sql.php';
 	//			echo "<p>Loading SQL : " . $sqlFileToLoad . "</p>";
 				require_once($sqlFileToLoad);

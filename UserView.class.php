@@ -16,8 +16,8 @@ class UserView extends View {
 	public function renderDashboard() {
 		$this->loadTemplate($this->templateNames['head'], $this->args);
 		$this->loadTemplate($this->templateNames['top'], $this->args);
-		$this->loadTemplate('dashboardMenu', $this->args);
-		$this->loadTemplate('dashboardContent', $this->args);
+		$this->loadTemplate('mapMenu', $this->args);
+		$this->loadTemplate('mapContent', $this->args);
 		$this->loadTemplate($this->templateNames['foot'], $this->args);
 	}
 }
