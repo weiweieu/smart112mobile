@@ -30,12 +30,6 @@ class UserController extends Controller {
 
 
 public function execute(){
-			if(isset($_POST['newLogin'])){
-				return $this->modifierLogin($this->request);
-			}
-			if(isset($_POST['createGame'])){
-				return $this->validateGameCreation($this->request);
-			}
 			if(isset($_POST['validateStep2'])){
 				return $this->validateStep2($this->request);
 			}
@@ -61,8 +55,15 @@ public function defaultAction($arg) {
 			return $this->inscriptionStep2($this->request);
 		}
 
+		$assistance_requests=RequestsModel::getAssistanceRequests();
+		$emergency_types = ['ALL','FIRE','ACCIDENT'];
+		$operator_types = ['OP_ALL','FIREMAN','POLICEMAN'];
+
 		$view = new UserView($this, 'userContent');
-		$view->setArg('text',"<h1>Bonjour " . $this->user->USER_LOGIN . "</h1>");
+		$view->setArg('emergency_types',$emergency_types);
+		$view->setArg('operator_types',$operator_types);
+		$view->setArg('requests',$assistance_requests);
+		$view->setArg('language',$this->language);
 		$view->render();
 
 	}
@@ -97,8 +98,9 @@ public function defaultAction($arg) {
 
 
 // action
-	public function dashboard($args) {
-		$v = new UserView($this->user,'dashboard');
+	public function map($args) {
+		$v = new UserView($this->user,'map');
+		$v->setArg('language',$this->language);
 		$v->renderDashboard();
 	}
 //

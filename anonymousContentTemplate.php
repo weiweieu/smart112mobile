@@ -15,7 +15,7 @@ $langFileToLoad = __ROOT_DIR . '/languages/langForms.'. $language .'.php';
 					<option value="#"><?php	echo $lang['CHOOSE_LANGUAGE']; ?></option>
 					<option value="en">English</option>
 					<option value="fr">Français</option>
-					<option value="es">Español</option>
+					<option value="es" disabled>Español</option>
 				</select>
 				<input type="submit" class="btn " id="languageButton" value="<?php	echo $lang['LANGUAGE_BUTTON']; ?>">
 			</form>
